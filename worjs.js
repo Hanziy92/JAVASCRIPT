@@ -30,7 +30,7 @@
 
 // Цикли
 
-let num = 50;
+// let num = 50;
 
 // while (num<55) {
 //    console.log(num);
@@ -49,10 +49,18 @@ let num = 50;
 //    num++;
 // }
 
-for (let i =1; i<8; i++) {
-   if (i === 6) {
-      break;
-   }
-   console.log(num);
-   num++;
-}
+// for (let i =1; i<8; i++) {
+//    if (i === 6) {
+//       break;
+//    }
+//    console.log(i);
+//    i++;
+// }
+
+
+// for (let i =1; i<8; i++) {
+//    if (i === 6) {
+//       continue;
+//    }
+//    console.log(i);
+// }
