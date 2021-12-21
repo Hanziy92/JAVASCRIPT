@@ -147,3 +147,29 @@
 // console.log(parseInt(test));  // Зі строки вертає в число заукруглює до цілого 12
 // console.log(parseFloat(test));  // вертає дробні числа  12.2
 
+
+
+// Callback function
+
+function first() {
+   //Do something
+   setTimeout(function(){
+      console.log(1)
+   }, 500)
+}
+
+function second() {
+   console.log(2);
+}
+first();
+second();
+
+
+function learnJS(lang, callback) {
+   console.log(`Я вчу ${lang}`);
+   callback();
+}
+function done() {
+   console.log('Я пройшов урок');
+}
+learnJS('Java Script', done);
