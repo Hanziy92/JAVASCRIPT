@@ -151,25 +151,73 @@
 
 // Callback function
 
-function first() {
-   //Do something
-   setTimeout(function(){
-      console.log(1)
-   }, 500)
-}
+// function first() {
+//    //Do something
+//    setTimeout(function(){
+//       console.log(1)
+//    }, 500)
+// }
 
-function second() {
-   console.log(2);
-}
-first();
-second();
+// function second() {
+//    console.log(2);
+// }
+// first();
+// second();
 
 
-function learnJS(lang, callback) {
-   console.log(`Я вчу ${lang}`);
-   callback();
-}
-function done() {
-   console.log('Я пройшов урок');
-}
-learnJS('Java Script', done);
+// function learnJS(lang, callback) {
+//    console.log(`Я вчу ${lang}`);
+//    callback();
+// }
+// function done() {
+//    console.log('Я пройшов урок');
+// }
+// learnJS('Java Script', done);
+
+// Об'єкти
+
+const options = {
+   name: 'test',
+   width: 1024,
+   height: 1024,
+   color: {
+      border: 'blac',
+      bg: 'red'
+   },
+   makeTest: function() {
+      console.log('Test'); 
+   }
+};
+
+options.makeTest();
+
+
+
+const {border, bg} = options.color;
+
+console.log(border);
+
+// console.log(Object.keys(options).length); // кількісь файлів в обєкті
+
+
+
+// delete options.name; // видаляє з об'єкта
+
+
+// for (let key in options) {
+//    if (typeof(options[key]) === 'object') {
+//       for (let i in options[key]) { 
+//          console.log(`Свойсто ${i} має значення ${options[key][i]}`); 
+//       } 
+//    } else {
+//       console.log(`Свойсто ${key} має значення ${options[key]}`);
+//    } 
+// }
+
+
+// let counter = 0;
+// for (let key in options) {
+//    counter++;
+// }
+
+
