@@ -438,85 +438,137 @@
 // Передача по ссилці або значенню
 
 
-function copy(mainObj) {
-   let objCopy = {};
+// function copy(mainObj) {
+//    let objCopy = {};
 
-   let key;
-   for(key in mainObj) {
-      objCopy[key] = mainObj[key];
-   }
-   return objCopy;
-} // поверхосте копіювання
+//    let key;
+//    for(key in mainObj) {
+//       objCopy[key] = mainObj[key];
+//    }
+//    return objCopy;
+// } // поверхосте копіювання
 
-const numbers = {
-   a: 3,
-   b:5,
-   c: {
-      x:7,
-      g:8
+// const numbers = {
+//    a: 3,
+//    b:5,
+//    c: {
+//       x:7,
+//       g:8
+//    }
+// };
+
+// const newNumbers = copy(numbers);
+// newNumbers.a = 10;
+
+// console.log(newNumbers);
+// console.log(numbers);
+
+// const add = {
+//    d: 17,
+//    e:20
+// }
+// console.log(Object.assign(numbers, add)); // МЕТОД ДОДАВАННЯ ОБЄКТА ДО ОБЄКТА
+
+
+// const clone = Object.assign({}, add); // КОПІЮВАННЯ ОБЄКТА
+// clone.d = 21;
+// console.log(clone);
+// console.log(add);
+
+
+
+
+// const oldArray = ['er', 'cw', 'pi', 'ty',];
+// const newArray = oldArray.slice(); // МЕТОД КОПІЮВАННЯ МАСИВУ
+
+// newArray[2] = 'dsfg';
+
+// console.log(oldArray);
+// console.log(newArray);
+
+
+
+
+// const video = ['youtube', 'hert', 'teryt'],
+//       blogs = ['wordpress', 'blogger', 'tiger'],
+//       internet = [...video, ...blogs, 'vk', 'fb']; // ... ПЕРЕДАЄ ЕЛЕМЕНТИ МАСИВУ
+
+// console.log(internet);
+
+// function log(a, b, c) {
+//    console.log(a);
+//    console.log(b);
+//    console.log(c);
+// }
+
+// const masArr = [2, 5, 7]; 
+
+// log(...masArr); // (...)  ПЕРЕДАСТЬ ПО ЕЛЕМЕНТНО МАСИВ РОЗЛОЖИТЬ ЙОГО НА ЧАСТИНИ
+
+
+// const sofiArray = ['hg', 'asd'];
+// const newSofiArray = [...sofiArray]; // (...) БУДЕ КОМІЯ МАСИВУ!!!!
+
+// const arrOne = {
+//    one: 1,
+//    two: 2
+// };
+
+// const newObjOne = {...arrOne}; // (...)  КОПІЮВАННЯ ОБЄКТА!!!!
+// newObjOne.one = 3;
+// console.log(newObjOne);
+// console.log(arrOne);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ООП
+const soldier = {
+   health: 400,
+   armor: 100,
+   sayHello: function() {
+      console.log('Hello')
    }
 };
 
-const newNumbers = copy(numbers);
-newNumbers.a = 10;
-
-console.log(newNumbers);
-console.log(numbers);
-
-const add = {
-   d: 17,
-   e:20
-}
-console.log(Object.assign(numbers, add)); // МЕТОД ДОДАВАННЯ ОБЄКТА ДО ОБЄКТА
-
-
-const clone = Object.assign({}, add); // КОПІЮВАННЯ ОБЄКТА
-clone.d = 21;
-console.log(clone);
-console.log(add);
-
-
-
-
-const oldArray = ['er', 'cw', 'pi', 'ty',];
-const newArray = oldArray.slice(); // МЕТОД КОПІЮВАННЯ МАСИВУ
-
-newArray[2] = 'dsfg';
-
-console.log(oldArray);
-console.log(newArray);
-
-
-
-
-const video = ['youtube', 'hert', 'teryt'],
-      blogs = ['wordpress', 'blogger', 'tiger'],
-      internet = [...video, ...blogs, 'vk', 'fb']; // ... ПЕРЕДАЄ ЕЛЕМЕНТИ МАСИВУ
-
-console.log(internet);
-
-function log(a, b, c) {
-   console.log(a);
-   console.log(b);
-   console.log(c);
-}
-
-const masArr = [2, 5, 7]; 
-
-log(...masArr); // (...)  ПЕРЕДАСТЬ ПО ЕЛЕМЕНТНО МАСИВ РОЗЛОЖИТЬ ЙОГО НА ЧАСТИНИ
-
-
-const sofiArray = ['hg', 'asd'];
-const newSofiArray = [...sofiArray]; // (...) БУДЕ КОМІЯ МАСИВУ!!!!
-
-const arrOne = {
-   one: 1,
-   two: 2
+const jonh = {
+   health: 100
 };
 
-const newObjOne = {...arrOne}; // (...)  КОПІЮВАННЯ ОБЄКТА!!!!
-newObjOne.one = 3;
-console.log(newObjOne);
-console.log(arrOne);
+// Jonh.__proto__ = soldier; // СТАРИЙ ВАРІАНТ
+
+Object.setPrototypeOf(jonh, soldier);
+
+console.log(jonh.armor);
+jonh.sayHello();
+
+
+
+
+
+
+
+
 
 
