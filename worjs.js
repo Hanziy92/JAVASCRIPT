@@ -531,6 +531,50 @@
 
 
 
+//ДИНАМІЧНА  ТИПІЗАЦИЯ 
+
+
+console.log(typeof(String(4)));  // БУДЕ ТИП РЯДОК STring
+
+console.log(5 + '') // БУДЕ ТИП РЯДОК
+
+
+const num =5;
+console.log('https://fb.com/category/toy/' + num);
+
+const fontSize = 26 + 'px';
+
+
+// To number
+
+
+console.log(typeof(Number('4')));  // БУДЕ ЧИСЛО
+
+
+console.log(typeof(+'4')); // УНАРНИЙ + БУДЕ ЧИСДО
+
+
+console.log(typeof(parseInt('15px', 10)));
+
+let answ = +prompt('Hello');
+
+
+// to boolean
+
+// 0, '', null, undefined, NaN; --- FALSE;
+
+// 1)
+let switcher = null;
+   if (switcher) {
+      console.log('workes...')
+}
+
+// 2) 
+console.log(typeof(Boolean('15px')));
+
+
+
+
 
 
 
