@@ -28,6 +28,27 @@
 // }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Цикли
 
 // let num = 50;
@@ -64,6 +85,30 @@
 //    }
 //    console.log(i);
 // }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -109,6 +154,29 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // // методи свойства чисел і рядків
 
 // const str = 'test';
@@ -134,7 +202,6 @@
 
 // console.log(logg.substr(6, 5)); // end arg скільки символів треба вирізати
 
-
 // // Numbers
 
 
@@ -146,6 +213,31 @@
 
 // console.log(parseInt(test));  // Зі строки вертає в число заукруглює до цілого 12
 // console.log(parseFloat(test));  // вертає дробні числа  12.2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -174,28 +266,44 @@
 // }
 // learnJS('Java Script', done);
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Об'єкти
 
-const options = {
-   name: 'test',
-   width: 1024,
-   height: 1024,
-   color: {
-      border: 'blac',
-      bg: 'red'
-   },
-   makeTest: function() {
-      console.log('Test'); 
-   }
-};
+// const options = {
+//    name: 'test',
+//    width: 1024,
+//    height: 1024,
+//    color: {
+//       border: 'blac',
+//       bg: 'red'
+//    },
+//    makeTest: function() {
+//       console.log('Test'); 
+//    }
+// };
 
-options.makeTest();
+// options.makeTest();
 
 
 
-const {border, bg} = options.color;
+// const {border, bg} = options.color; // ДЕСТРУКЦІЯ ОБЄКТА
 
-console.log(border);
+// console.log(border);
 
 // console.log(Object.keys(options).length); // кількісь файлів в обєкті
 
@@ -220,43 +328,195 @@ console.log(border);
 //    counter++;
 // }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Масиви
 
-const arr = [13, 2, 22, 21, 10];
-arr.sort(comperenNum);
-console.log(arr);
-
-function comperenNum(a, b) {
-   return a -b;
-}
-
-
-
-
-arr.forEach(function(item, i, arr) {
-   console.log(`${i}: ${item} в середені маиву ${arr}`);
-});
-
-// console.log(arr.length);
-
-// arr.pop();
-// arr.push(10);
-
+// const arr = [13, 2, 22, 21, 10];
+// arr.sort(comperenNum);
 // console.log(arr);
 
-// for (let i = 0; i < arr.length; i++) {
-//    console.log(arr[i]);
+// function comperenNum(a, b) {
+//    return a -b;
 // }
 
-// for (let value of arr) {
-//    console.log(value);
-// }
+// arr.forEach(function(item, i, arr) {
+//    console.log(`${i}: ${item} в середені маиву ${arr}`);
+// });
+
+// // console.log(arr.length);
+
+// // arr.pop();
+// // arr.push(10);
+
+// // console.log(arr);
+
+// // for (let i = 0; i < arr.length; i++) {
+// //    console.log(arr[i]);
+// // }
+
+// // for (let value of arr) {
+// //    console.log(value);
+// // }
+
+
+// const str = prompt('', '');
+// const products = str.split(', '); // з рядка в масив
+// products.sort();
+// console.log(products.join('; ')); // з масива в рядок
 
 
 
-const str = prompt('', '');
-const products = str.split(', '); // з рядка в масив
-products.sort();
-console.log(products.join('; ')); // з масива в рядок
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Передача по ссилці або значенню
+
+
+function copy(mainObj) {
+   let objCopy = {};
+
+   let key;
+   for(key in mainObj) {
+      objCopy[key] = mainObj[key];
+   }
+   return objCopy;
+} // поверхосте копіювання
+
+const numbers = {
+   a: 3,
+   b:5,
+   c: {
+      x:7,
+      g:8
+   }
+};
+
+const newNumbers = copy(numbers);
+newNumbers.a = 10;
+
+console.log(newNumbers);
+console.log(numbers);
+
+const add = {
+   d: 17,
+   e:20
+}
+console.log(Object.assign(numbers, add)); // МЕТОД ДОДАВАННЯ ОБЄКТА ДО ОБЄКТА
+
+
+const clone = Object.assign({}, add); // КОПІЮВАННЯ ОБЄКТА
+clone.d = 21;
+console.log(clone);
+console.log(add);
+
+
+
+
+const oldArray = ['er', 'cw', 'pi', 'ty',];
+const newArray = oldArray.slice(); // МЕТОД КОПІЮВАННЯ МАСИВУ
+
+newArray[2] = 'dsfg';
+
+console.log(oldArray);
+console.log(newArray);
+
+
+
+
+const video = ['youtube', 'hert', 'teryt'],
+      blogs = ['wordpress', 'blogger', 'tiger'],
+      internet = [...video, ...blogs, 'vk', 'fb']; // ... ПЕРЕДАЄ ЕЛЕМЕНТИ МАСИВУ
+
+console.log(internet);
+
+function log(a, b, c) {
+   console.log(a);
+   console.log(b);
+   console.log(c);
+}
+
+const masArr = [2, 5, 7]; 
+
+log(...masArr); // (...)  ПЕРЕДАСТЬ ПО ЕЛЕМЕНТНО МАСИВ РОЗЛОЖИТЬ ЙОГО НА ЧАСТИНИ
+
+
+const sofiArray = ['hg', 'asd'];
+const newSofiArray = [...sofiArray]; // (...) БУДЕ КОМІЯ МАСИВУ!!!!
+
+const arrOne = {
+   one: 1,
+   two: 2
+};
+
+const newObjOne = {...arrOne}; // (...)  КОПІЮВАННЯ ОБЄКТА!!!!
+newObjOne.one = 3;
+console.log(newObjOne);
+console.log(arrOne);
 
 
