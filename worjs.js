@@ -305,6 +305,9 @@
 
 // console.log(border);
 
+
+
+
 // console.log(Object.keys(options).length); // кількісь файлів в обєкті
 
 
@@ -369,7 +372,7 @@
 // Масиви
 
 // const arr = [13, 2, 22, 21, 10];
-// arr.sort(comperenNum);
+// arr.sort(comperenNum); // СОРТУЄ МАСИВ
 // console.log(arr);
 
 // function comperenNum(a, b) {
@@ -382,8 +385,8 @@
 
 // // console.log(arr.length);
 
-// // arr.pop();
-// // arr.push(10);
+// // arr.pop(); // ВИДАЛЯЄ ОСТАННЄ З МАСИВУ
+// // arr.push(10); // ДОДАЄ В КІНЕЦЬ МАСИВУ
 
 // // console.log(arr);
 
@@ -467,6 +470,9 @@
 //    d: 17,
 //    e:20
 // }
+
+
+
 // console.log(Object.assign(numbers, add)); // МЕТОД ДОДАВАННЯ ОБЄКТА ДО ОБЄКТА
 
 
@@ -543,25 +549,29 @@
 
 
 
-// ООП
-const soldier = {
-   health: 400,
-   armor: 100,
-   sayHello: function() {
-      console.log('Hello')
-   }
-};
+// // ООП
+// const soldier = {
+//    health: 400,
+//    armor: 100,
+//    sayHello: function() {
+//       console.log('Hello')
+//    }
+// };
 
-const jonh = {
-   health: 100
-};
+// const jonh = Object.create(soldier); // СТВОРЕННЯ ПРОТОТИМУ
+
+
+
+// const jonh = {
+//    health: 100
+// };
 
 // Jonh.__proto__ = soldier; // СТАРИЙ ВАРІАНТ
 
-Object.setPrototypeOf(jonh, soldier);
+// Object.setPrototypeOf(jonh, soldier); // СУЧАСНИЙ МЕТОД
 
-console.log(jonh.armor);
-jonh.sayHello();
+// console.log(jonh.armor);
+// jonh.sayHello();
 
 
 
