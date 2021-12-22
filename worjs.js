@@ -220,4 +220,43 @@ console.log(border);
 //    counter++;
 // }
 
+// Масиви
+
+const arr = [13, 2, 22, 21, 10];
+arr.sort(comperenNum);
+console.log(arr);
+
+function comperenNum(a, b) {
+   return a -b;
+}
+
+
+
+
+arr.forEach(function(item, i, arr) {
+   console.log(`${i}: ${item} в середені маиву ${arr}`);
+});
+
+// console.log(arr.length);
+
+// arr.pop();
+// arr.push(10);
+
+// console.log(arr);
+
+// for (let i = 0; i < arr.length; i++) {
+//    console.log(arr[i]);
+// }
+
+// for (let value of arr) {
+//    console.log(value);
+// }
+
+
+
+const str = prompt('', '');
+const products = str.split(', '); // з рядка в масив
+products.sort();
+console.log(products.join('; ')); // з масива в рядок
+
 
