@@ -568,10 +568,15 @@ let switcher = null;
    if (switcher) {
       console.log('workes...')
 }
-
+switcher = 1;
+   if (switcher) {
+      console.log('workes...')
+}
 // 2) 
 console.log(typeof(Boolean('15px')));
+// 3)
 
+console.log(typeof(!!'15'));
 
 
 
