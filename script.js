@@ -149,7 +149,30 @@
 //    console.log(e.target);
 // });
 
+// DOM
+
+
+// console.log(document.body);
+// console.log(document.documentElement);
+// console.log(document.body.childNodes); // подучає що є в середені батька
+// console.log(document.body.firstNodes); // получаєм перший вузел в батька
+// console.log(document.body.lastNodes); // получаєм останій вузел в батька
+
+
+// console.log(document.querySelector('#current').parentNode); // получає батька елемента на один рівень
+// console.log(document.querySelector('#current').parentElement);
+
+
+// // console.log(document.querySelector('[data-current="3"]').nextSibling);
+
+// console.log(document.querySelector('[data-current="3"]').nextElementSibling); // Получає наступний елемент баька
+// console.log(document.body.firstElementChild); // Получає перший елемент баька
 
 
 
-
+for (let node of document.body.childNodes) {
+   if (node.nodeName == '#text') {
+      continue;
+   }
+   console.log(node);
+}
