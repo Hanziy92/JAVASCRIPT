@@ -369,6 +369,8 @@
 
 
 
+
+
 // Масиви
 
 // const arr = [13, 2, 22, 21, 10];
@@ -534,49 +536,49 @@
 //ДИНАМІЧНА  ТИПІЗАЦИЯ 
 
 
-console.log(typeof(String(4)));  // БУДЕ ТИП РЯДОК STring
+// console.log(typeof(String(4)));  // БУДЕ ТИП РЯДОК STring
 
-console.log(5 + '') // БУДЕ ТИП РЯДОК
-
-
-const num =5;
-console.log('https://fb.com/category/toy/' + num);
-
-const fontSize = 26 + 'px';
+// console.log(5 + '') // БУДЕ ТИП РЯДОК
 
 
-// To number
+// const num =5;
+// console.log('https://fb.com/category/toy/' + num);
+
+// const fontSize = 26 + 'px';
 
 
-console.log(typeof(Number('4')));  // БУДЕ ЧИСЛО
+// // To number
 
 
-console.log(typeof(+'4')); // УНАРНИЙ + БУДЕ ЧИСДО
+// console.log(typeof(Number('4')));  // БУДЕ ЧИСЛО
 
 
-console.log(typeof(parseInt('15px', 10)));
-
-let answ = +prompt('Hello');
+// console.log(typeof(+'4')); // УНАРНИЙ + БУДЕ ЧИСДО
 
 
-// to boolean
+// console.log(typeof(parseInt('15px', 10)));
 
-// 0, '', null, undefined, NaN; --- FALSE;
+// let answ = +prompt('Hello');
 
-// 1)
-let switcher = null;
-   if (switcher) {
-      console.log('workes...')
-}
-switcher = 1;
-   if (switcher) {
-      console.log('workes...')
-}
-// 2) 
-console.log(typeof(Boolean('15px')));
-// 3)
 
-console.log(typeof(!!'15'));
+// // to boolean
+
+// // 0, '', null, undefined, NaN; --- FALSE;
+
+// // 1)
+// let switcher = null;
+//    if (switcher) {
+//       console.log('workes...')
+// }
+// switcher = 1;
+//    if (switcher) {
+//       console.log('workes...')
+// }
+// // 2) 
+// console.log(typeof(Boolean('15px')));
+// // 3)
+
+// console.log(typeof(!!'15'));
 
 
 
@@ -621,7 +623,6 @@ console.log(typeof(!!'15'));
 
 // console.log(jonh.armor);
 // jonh.sayHello();
-
 
 
 

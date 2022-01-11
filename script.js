@@ -22,22 +22,22 @@
 
 
 
-const box = document.getElementById('box'),
-      btns = document.getElementsByTagName('button'),
-      criles = document.getElementsByClassName('circle'),
-      wrapper = document.querySelector('.wrapper'),
-      hearts = wrapper.querySelectorAll('.heart'),
-      oneHeart = wrapper.querySelector('.heart');
+// const box = document.getElementById('box'),
+//       btns = document.getElementsByTagName('button'),
+//       criles = document.getElementsByClassName('circle'),
+//       wrapper = document.querySelector('.wrapper'),
+//       hearts = wrapper.querySelectorAll('.heart'),
+//       oneHeart = wrapper.querySelector('.heart');
 
 
 
-box.style.backgroundColor = 'blue';
-box.style.width = '500px';
+// box.style.backgroundColor = 'blue';
+// box.style.width = '500px';
 
-box.style.cssText = 'backround-color: blue; width: 500px';
+// box.style.cssText = 'backround-color: blue; width: 500px';
 
-btns[1].style.borderRadius = '100%';
-criles[0].style.backgroundColor = 'yellow';
+// btns[1].style.borderRadius = '100%';
+// criles[0].style.backgroundColor = 'yellow';
 
 
 // for (let i = 0; i < hearts.length; i++) {
@@ -45,18 +45,18 @@ criles[0].style.backgroundColor = 'yellow';
 // }
 
 
-hearts.forEach(item => {
-   item.style.backgroundColor = 'green';
-});
+// hearts.forEach(item => {
+//    item.style.backgroundColor = 'green';
+// });
 
 
-const div = document.createElement('div'); // Сворює блок (Вказуєш який потрібно)
+// const div = document.createElement('div'); // Сворює блок (Вказуєш який потрібно)
 
 // const text = document.createTextNode('jskfd'); НЕ використовується
 
-div.classList.add('black'); // Додаєм йому стиль класс з CSS файлу
+// div.classList.add('black'); // Додаєм йому стиль класс з CSS файлу
 
-wrapper.append(div); // Добваляє в кінці блоку
+// wrapper.append(div); // Добваляє в кінці блоку
 // wrapper.appendChild(div);
 
 // wrapper.prepend(div); // Добваляє на початку блоку
@@ -75,7 +75,7 @@ wrapper.append(div); // Добваляє в кінці блоку
 // wrapper.replaceChild(criles[0], hearts[0]); // Заміна файлів - СТАРИЙ МЕТОД
 
 
-div.innerHTML = '<h1>Hello World</h1>'; // Добавляє динамічно формує структуру сайту
+// div.innerHTML = '<h1>Hello World</h1>'; // Добавляє динамічно формує структуру сайту
 
 // div.textContent = 'hello'; // Метод Тільки для тексту
 
@@ -86,6 +86,68 @@ div.innerHTML = '<h1>Hello World</h1>'; // Добавляє динамічно �
 
 // div.insertAdjacentHTML("afterbegin", '<h2>HELLO</h2>'); // всатвляє на початоку елементу (в середені)
 // div.insertAdjacentHTML("beforeend", '<h2>HELLO</h2>'); // всатвляє в кінець елементу (в середені) 
+
+
+
+
+
+
+
+
+
+
+
+// ПОДІЯ
+
+// const btn = document.querySelectorAll('button'),
+//       overlay = document.querySelector('.overlay');
+
+// // btn.onclick = function() {
+// //    alert('click');
+// // };
+
+// // btn.onclick = function() {
+// //    alert('second click');
+// // };
+
+// // btn.addEventListener('click', () => {
+// //    alert('Click');
+// // });
+
+// // btn.addEventListener('click', () => {
+// //    alert('Second Click');
+// // });
+
+
+// // Получаєм дані про обєкт ПОТРІБНО  В CALLBACK АРГУМЕНТ ДОДАТИ
+
+// // let i = 0;
+// const dltElement = (e) => {
+//    console.log(e.currentTarget);
+//    console.log(e.type);
+//    // i++;
+//    // if (i == 1) {
+//    //    btn.removeEventListener('click', dltElement); // DELETE EVENT
+//    // }
+// };
+ 
+// // btn.addEventListener('click', dltElement);
+// // overlay.addEventListener('click', dltElement);
+
+// btn.forEach(item => {
+//    item.addEventListener('click', dltElement, {one: true});
+// });
+
+
+// // ВІДМІНЯТИ СТАНДАРТНЕ ПОВЕДІНКУ БРАУЗЕРА
+
+// const link = document.querySelector('a');
+
+// link.addEventListener('click', (e) => {
+//    e.preventDefault();
+
+//    console.log(e.target);
+// });
 
 
 
