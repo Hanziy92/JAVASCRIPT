@@ -149,6 +149,9 @@
 //    console.log(e.target);
 // });
 
+
+
+
 // DOM
 
 
@@ -170,9 +173,59 @@
 
 
 
-for (let node of document.body.childNodes) {
-   if (node.nodeName == '#text') {
-      continue;
-   }
-   console.log(node);
-}
+// for (let node of document.body.childNodes) {
+//    if (node.nodeName == '#text') {
+//       continue;
+//    }
+//    console.log(node);
+// }
+
+
+
+
+
+
+
+
+//  ПОДІЯ НА ТЕЛ
+
+// touchstart -  При нажиманні пальцьом касанія
+// touchmove - Коли малець рухається зїздає
+// touchend - Коли палець відірвався
+// touchenter - коли палець при скальзуванні переходить на елемент то спрацьовує
+// touchleave - коли скадьзить і пішов за межі елемента
+// touchcancel - коли виходить за межі браузера
+
+
+
+window/addEventListener('DOMContentLoaded', () =>{
+   const box = document.querySelector(',box');
+
+   box.addEventListener('touchstart', (e) => {
+      e.preventDefault();
+      console.log('start');
+      console.log(e.touches);
+     
+
+
+   });
+
+   box.addEventListener('touchmove', (e) => {
+      e.preventDefault();
+      console.log('Move');
+
+
+   });
+
+
+   box.addEventListener('touchend', (e) => {
+      e.preventDefault();
+      console.log('End');
+
+   });
+
+
+});
+
+
+// touches - список пальців скільки зараз використовується
