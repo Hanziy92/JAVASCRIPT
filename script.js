@@ -197,35 +197,44 @@
 // touchcancel - коли виходить за межі браузера
 
 
+// e.touches - список пальців скільки зараз використовується
 
-window/addEventListener('DOMContentLoaded', () =>{
-   const box = document.querySelector(',box');
+// e.targetTouches - скільки пальців на елементі
 
-   box.addEventListener('touchstart', (e) => {
-      e.preventDefault();
-      console.log('start');
-      console.log(e.touches);
+// e.changedTouches - які пальци зробили дію
+
+
+
+// window/addEventListener('DOMContentLoaded', () =>{
+//    const box = document.querySelector(',box');
+
+//    box.addEventListener('touchstart', (e) => {
+//       e.preventDefault();
+//       console.log('start');
+//       console.log(e.touches);
      
 
 
-   });
+//    });
 
-   box.addEventListener('touchmove', (e) => {
-      e.preventDefault();
-      console.log('Move');
-
-
-   });
+//    box.addEventListener('touchmove', (e) => {
+//       e.preventDefault();
+//       console.log('Move');
 
 
-   box.addEventListener('touchend', (e) => {
-      e.preventDefault();
-      console.log('End');
-
-   });
+//    });
 
 
-});
+//    box.addEventListener('touchend', (e) => {
+//       e.preventDefault();
+//       console.log('End');
+
+//    });
 
 
-// touches - список пальців скільки зараз використовується
+// });
+
+
+ const p = document.querySelectorAll('p');
+
+ console.log(p);
