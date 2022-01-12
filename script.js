@@ -238,3 +238,22 @@
  const p = document.querySelectorAll('p');
 
  console.log(p);
+
+ /// ДИНАМІЧНИЙ СКРІПТ  
+
+ const script = document.querySelector('script');
+ script.src = "script.js";
+ script.async = false;
+ document.body.append(script);
+
+
+ function loadScript(src) {
+   const script = document.querySelector('script');
+   script.src = "script.js";
+   script.async = false;
+   document.body.append(script);
+ }
+
+ loadScript(script.js);
+ loadScript(worjs.js);
+
