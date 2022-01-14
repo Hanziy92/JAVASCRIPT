@@ -1,5 +1,8 @@
 'use strict';
 
+
+// ВІЖБІР ЕЛЕМЕНТА ТА МАНІПУЛЯЦІЇ З НИМ
+
 // const box = document.getElementById('box');
 
 // console.log(box);
@@ -86,15 +89,6 @@
 
 // div.insertAdjacentHTML("afterbegin", '<h2>HELLO</h2>'); // всатвляє на початоку елементу (в середені)
 // div.insertAdjacentHTML("beforeend", '<h2>HELLO</h2>'); // всатвляє в кінець елементу (в середені) 
-
-
-
-
-
-
-
-
-
 
 
 // ПОДІЯ
@@ -283,3 +277,31 @@
 
 //    btns[1].classList.toggle('red');
 // });
+
+// ДЕЛЕГІРОВАННЯ ОБРОБОТКА НА ВСІ ЕЛЕМЕНТИ ОДНАКОВІ В БЛОЦІ
+
+//  ПОТРІБНО У IF Вказувати і перще значення, tagName перевіряє в блоці чи є такі елементи і на них вішаєш подію
+
+// wrapper.addEventListener('click', (e) => {
+//    if (e.target && e.target.tagName == "BUTTON") {
+//       console.log('Hello');
+//    }
+// });  
+
+// ЧИ СПІВБАДАЄ ЕЛЕМЕНт З ЧИМОСЬ ШО ВКАЗУЄМ В ПЕРЕДАЧУ МЕТОДУ І ТОДІ ВІДБУВАЄТЬСЯ ДІЯ
+// wrapper.addEventListener('click', (e) => {
+//    if (e.target && e.target.matches("button.red")) {
+//       console.log('Hello');
+//    }
+// });
+
+// btns.forEach (btn => {
+//    btns.addEventListener('click', () => {
+//       console.log('Hello');
+//    });
+// });
+
+// const btn = document.createElement('button');
+// btn.classList.add('red');
+// wrapper.append(btn);
+
