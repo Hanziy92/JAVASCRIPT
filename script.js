@@ -235,25 +235,51 @@
 // });
 
 
- const p = document.querySelectorAll('p');
+//  const p = document.querySelectorAll('p');
 
- console.log(p);
+//  console.log(p);
 
- /// ДИНАМІЧНИЙ СКРІПТ  
+//  /// ДИНАМІЧНИЙ СКРІПТ  
 
- const script = document.querySelector('script');
- script.src = "script.js";
- script.async = false;
- document.body.append(script);
+//  const script = document.querySelector('script');
+//  script.src = "script.js";
+//  script.async = false;
+//  document.body.append(script);
 
 
- function loadScript(src) {
-   const script = document.querySelector('script');
-   script.src = "script.js";
-   script.async = false;
-   document.body.append(script);
- }
+//  function loadScript(src) {
+//    const script = document.querySelector('script');
+//    script.src = "script.js";
+//    script.async = false;
+//    document.body.append(script);
+//  }
 
- loadScript(script.js);
- loadScript(worjs.js);
+//  loadScript(script.js);
+//  loadScript(worjs.js);
 
+
+// CLASSLIST
+
+// const btns = document.querySelectorAll('button');
+
+// // console.log(btns[0].classList.length);
+// console.log(btns[0].classList.item(1)); // показує клас по порядку-без аргумента показує кількість
+// console.log(btns[0].classList.add('red', 'sadas')); // Добавляє клас
+// console.log(btns[0].classList.remove('blue')); // Видаляє клас
+// console.log(btns[0].classList.toggle('blue')); // якщо є клас до видаляє якщо нема то добавляє
+
+
+// if (btns[1].classList.contains('red')) { // Провіряє на класи і вертає Boolean значення
+//    console.log('REDCLASS');
+// }
+
+// btns[0].addEventListener('click', () => {
+//    // if(!btns[1].classList.contains('red')) {
+//    //    btns[1].classList.add('red');
+//    // } else {
+//    //    btns[1].classList.remove('red');
+//    // }
+
+
+//    btns[1].classList.toggle('red');
+// });
