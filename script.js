@@ -91,6 +91,21 @@
 // div.insertAdjacentHTML("beforeend", '<h2>HELLO</h2>'); // всатвляє в кінець елементу (в середені) 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // ПОДІЯ
 
 // const btn = document.querySelectorAll('button'),
@@ -133,6 +148,16 @@
 // });
 
 
+
+
+
+
+
+
+
+
+
+
 // // ВІДМІНЯТИ СТАНДАРТНЕ ПОВЕДІНКУ БРАУЗЕРА
 
 // const link = document.querySelector('a');
@@ -142,6 +167,16 @@
 
 //    console.log(e.target);
 // });
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -181,6 +216,13 @@
 
 
 
+
+
+
+
+
+
+
 //  ПОДІЯ НА ТЕЛ
 
 // touchstart -  При нажиманні пальцьом касанія
@@ -206,18 +248,13 @@
 //       e.preventDefault();
 //       console.log('start');
 //       console.log(e.touches);
-     
-
 
 //    });
 
 //    box.addEventListener('touchmove', (e) => {
 //       e.preventDefault();
 //       console.log('Move');
-
-
 //    });
-
 
 //    box.addEventListener('touchend', (e) => {
 //       e.preventDefault();
@@ -225,13 +262,23 @@
 
 //    });
 
-
 // });
-
 
 //  const p = document.querySelectorAll('p');
 
 //  console.log(p);
+
+
+
+
+
+
+
+
+
+
+
+
 
 //  /// ДИНАМІЧНИЙ СКРІПТ  
 
@@ -250,6 +297,13 @@
 
 //  loadScript(script.js);
 //  loadScript(worjs.js);
+
+
+
+
+
+
+
 
 
 // CLASSLIST
@@ -278,6 +332,18 @@
 //    btns[1].classList.toggle('red');
 // });
 
+
+
+
+
+
+
+
+
+
+
+
+
 // ДЕЛЕГІРОВАННЯ ОБРОБОТКА НА ВСІ ЕЛЕМЕНТИ ОДНАКОВІ В БЛОЦІ
 
 //  ПОТРІБНО У IF Вказувати і перще значення, tagName перевіряє в блоці чи є такі елементи і на них вішаєш подію
@@ -304,4 +370,124 @@
 // const btn = document.createElement('button');
 // btn.classList.add('red');
 // wrapper.append(btn);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// РОБОТА З ДАТАМИ
+
+// const now = new Date(); // ВИДАЄ ПОТОЧНУ ДАТУ
+// const now = new Date('2022-01-28'); ПОКАЗУЄ ДАТУ А ЧАС ПОКАЖЕ 00:00:00
+// const now = new Date(2022, 1, 28, 20);
+
+
+
+// МЕТОДИ ДАТИ
+
+// const now = new Date();
+
+// console.log(now.setHours(18, 40)); 
+// console.log(now);
+
+
+// console.log(now.getFullYear()); // ПОЛУЧАЄМ ТІЛЬКИ РІК
+// console.log(now.getMonth()); // ПОЛУЧАЄМ МІСЯЦЬ
+// console.log(now.getDate()); // ПОЛУЧАЄМ ДЕНЬ
+// console.log(now.getDay()); // ПОЛУЧАЄМ НОМЕР ДНЯ ТИЖНЯ
+// console.log(now.getHours()); 
+// console.log(now.getUTCHours()); 
+
+// console.log(now.getTimezoneOffset()); 
+// console.log(now.getTime());
+
+
+// let start = new Date();
+
+// for (let i = 0;  i <100000; i++) {
+//    let some = i ** 3;
+// }
+
+// let and = new Date();
+
+// alert(`цикл відпрацював за ${and - start} мілісекунд`);
+// document.querySelector('.box')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const box = document.querySelector('.box'),
+      btn = document.querySelector('button');
+
+// const width = box.clientWidth;
+// const height = box.clientHeight;
+
+
+// const width = box.offsetWidth;
+// const height = box.offsetHeight;
+
+// const width = box.scrollWidth;
+// const height = box.scrollHeight;
+
+// console.log(width, height);
+
+
+// btn.addEventListener('click', () => {
+// box.style.height = box.scrollHeight + 'px';
+//    console.log(box.scrollTop);
+// });
+
+// console.log(box.getBoundingClientRect().top);
+
+// const style = window.getComputedStyle(box);
+
+// console.log(style.display);
+
+// console.log(document.documentElement.clientWidth);
+// console.log(document.documentElement.scrollTop);
+
+// document.documentElement.scrollTop = 0; // СКРОЛИТЬ У ВЕРХ САМИЙ
+
+// window.scrollBy(0, 400); // ВІД ТЕКУЩОГО положення СКРОЛИТЬ в НИЗ
+// window.scrollTo(0, 400); // ВІД Загальної сторінки СКРОЛИТЬ в НИЗ
+
 
