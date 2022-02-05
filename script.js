@@ -441,22 +441,11 @@
 
 
 
+// SCROLL
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-const box = document.querySelector('.box'),
-      btn = document.querySelector('button');
+// const box = document.querySelector('.box'),
+//       btn = document.querySelector('button');
 
 // const width = box.clientWidth;
 // const height = box.clientHeight;
@@ -491,3 +480,36 @@ const box = document.querySelector('.box'),
 // window.scrollTo(0, 400); // ВІД Загальної сторінки СКРОЛИТЬ в НИЗ
 
 
+
+
+
+
+
+
+
+
+// КОНСТРУКОР ФУНКЦІЯ {ES5}   
+
+// function User(name, id) {
+//    this.name = name;
+//    this.id = id;
+//    this.human = true;
+//    this.hello = function() {
+//       console.log(`Hello ${this.name}`)
+//    };
+// } 
+
+// User.prototype.exit = function() {
+//    console.log(`Користувач ${this.name} вийшов`);
+// }
+
+// const petro = new User('Petro', 29);
+// const sofia = new User('Sofia', 28);
+
+// petro.exit();
+
+// petro.hello();
+// sofia.hello();
+
+// console.log(petro);
+console.log(sofia);
