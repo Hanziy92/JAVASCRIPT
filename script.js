@@ -512,4 +512,110 @@
 // sofia.hello();
 
 // console.log(petro);
-console.log(sofia);
+// console.log(sofia);
+
+
+
+
+
+
+
+
+
+
+
+
+
+// КОНТЕКСТ ВИКЛИКУ THIS
+
+// function showThis(a, b) {
+//    console.log(this);
+//    function sum() {
+//       console.log(this);
+//       return a + b;
+//    }
+//    console.log(sum());
+// }
+
+// showThis(4, 5);
+
+// 1) Звичайна функція: this = window, якщо стоїть use strict = undefined
+
+// const obj = {
+//    a: 20,
+//    b: 15,
+//    sum: function() {
+//       function shout() {
+//          console.log(this); // тут буде undefined 
+//       }
+//       shout();
+//    }
+// };
+// obj.sum();
+
+
+// 2) Конткст у  метода обєкту This = сам обєкт
+
+// function User(name, id) {
+//       this.name = name;
+//       this.id = id;
+//       this.human = true;
+//       this.hello = function() {
+//          console.log("Hello!" + this.name);  
+//       };
+//    } 
+//    let petro = new User('petro', 29);
+
+   // 3) This в конструкторах і класах = новий екземляр обєкта.
+
+   // function sayName(surname) {
+   //    console.log(this);
+   //    console.log(this.name + surname);
+   // }
+
+   // const user = {
+   //    name: 'John'
+   // };
+
+   // sayName.call(user, 'Smith'); // методи виклику різниця в синтаксисі передачі аргумента
+   // sayName.apply(user, ['Roben']);
+
+   // function count(num) {
+   //    return this*num;
+   // }
+
+   // const double = count.bind(2);
+   // console.log(double(3));
+   // console.log(double(13));
+
+   // 4) Ручна привязка This: call, apply, bind
+
+
+   const btn = document.querySelector('button');
+   // Якщо callback не стрілочна фуекція this = елементу.
+   btn.addEventListener('click', function() {
+      // console.log(this);
+      this.style.backgroundColor = 'red';
+   });
+   // Якщо стрілочна фунція на оброботці події то This не працює потрібно event
+   btn.addEventListener('click', (e) => {
+      e.target.style.backgroundColor = 'red';
+   });
+
+
+      // стрілочна функція This буде силатися на батька в даному випатку на рбєкт
+   const obj = {
+      num: 5,
+      sayNumber: function() {
+         const say = () => {
+            console.log(this);
+         }
+         say();
+      }
+   };
+
+   obj.sayNumber();
+   // Скорочений запис стрілочної функції
+   const double = a => a * 2;
+   console.log(double(4));
+   
