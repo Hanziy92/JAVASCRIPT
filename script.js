@@ -631,35 +631,60 @@
 
 
    // CLASS ES 6
-class Rectangle {
-   constructor (height, width) {
-      this.height = height;
-      this.width = width;
-   }
+// class Rectangle {
+//    constructor (height, width) {
+//       this.height = height;
+//       this.width = width;
+//    }
 
-   calcArea() {
-      return this.height * this.width;
-   }
-}
+//    calcArea() {
+//       return this.height * this.width;
+//    }
+// }
 
-class ColoredRectangleLeWithTex extends Rectangle {
-   constructor (height, width, text, bgColor) {
-      super(height, width); // На першому місті в конструкторі - цей метод визиває конструктор батька
-      this.text = text;
-      this.bgColor = bgColor;
-   }
+// class ColoredRectangleLeWithTex extends Rectangle {
+//    constructor (height, width, text, bgColor) {
+//       super(height, width); // На першому місті в конструкторі - цей метод визиває конструктор батька
+//       this.text = text;
+//       this.bgColor = bgColor;
+//    }
 
-   showMyProps() {
-      console.log(`Текст ${this.text}, колір: ${this.bgColor}`);
-   }
-}
-const div = new ColoredRectangleLeWithTex(25, 10, 'Hello World', 'red');
+//    showMyProps() {
+//       console.log(`Текст ${this.text}, колір: ${this.bgColor}`);
+//    }
+// }
+// const div = new ColoredRectangleLeWithTex(25, 10, 'Hello World', 'red');
 
-div.showMyProps();
-console.log(div.calcArea()); 
+// div.showMyProps();
+// console.log(div.calcArea()); 
 
 // const square = new Rectangle(10, 10);
 // const twoSquare = new Rectangle(5, 5);
 
 // console.log(square.calcArea());
 // console.log(twoSquare.calcArea());
+
+
+
+
+
+
+
+
+
+
+
+
+// REST ОПЕРАТОР ES6
+
+// const log = function(a, b, ...rest) {
+//    console.log(a, b, rest);
+// }
+
+// log('basic', 'rest', 'operator', 'usage ');
+
+// function calcOrDouble(number, basis = 2) {
+//    console.log(number * basis);
+// }
+
+// calcOrDouble(3);
